@@ -1,0 +1,86 @@
+Proceso contactosTelefono
+	Definir nombre1 , nombre2 , nombre3 Como Caracter;
+	Definir telefono1, telefono2, telefono3 Como Caracter;
+	Definir organizacion1, organizacion2, organizacion3 Como Caracter;
+	Definir opcion, opcionContacto, eliminar Como Entero;
+	Definir contacto1, contacto2, contacto3 Como Caracter;
+	
+	contacto1 <- "Carmen Montiel";
+	contacto2 <- "Sandy Benitez";
+	contacto3 <- "Juan Montiel";
+	telefono1 <- "3126037934";
+	telefono2 <- "3005556677";
+	telefono3 <- "3014445566";
+	organizacion1 <- "Sofka";
+	organizacion2 <- "SAS";
+	organizacion3 <- "bnm";
+	
+	Repetir
+	Escribir "Indique qué desea realizar";
+	Escribir "1. Registrar Contacto ";
+	Escribir "2. Consultar Contactos ";
+	Escribir "3. Eliminar Contactos ";
+	Leer opcion;
+	Segun opcion Hacer
+		1:
+			Escribir "Nombre y Apellidos:";
+			leer nombre1;
+			Escribir "Número de teléfono:";
+			leer telefono1;
+			Escribir "Organizacion o empresa:";
+			leer organizacion1;
+			Escribir "Tu contacto se ha guardado: ","Nombre: ", nombre1 , " ", "teléfono ", " ", telefono1 , " organización ", " ", organizacion1;
+			Leer contacto1;
+			
+			Escribir "Nombre y Apellidos:";
+			leer nombre2;
+			Escribir "Número de teléfono:";
+			leer telefono2;
+			Escribir "Organizacion o empresa:";
+			leer organizacion2;
+			Escribir "Tu contacto se ha guardado: ","Nombre: ", nombre2 , " ", " teléfono ", " ", telefono2 , " organización ", " ", organizacion2;
+			Leer contacto2;
+			
+			Escribir "Nombre y Apellidos:";
+			leer nombre3;
+			Escribir "Número de teléfono:";
+			leer telefono3;
+			Escribir "Organizacion o empresa:";
+			leer organizacion3;
+			Escribir "Tu contacto se ha guardado: ", "Nombre: ",  nombre3, " ", " teléfono ", " ", telefono3, " organización ", " ", organizacion3;
+			Leer contacto3;
+		2:
+			Escribir " consultar: ";
+			Escribir " Contacto 1 ";
+			Escribir " Contacto 2";
+			Escribir " Contacto 3";
+			Leer opcionContacto;
+			Segun opcionContacto Hacer
+					
+				1:Escribir "Informacion de contacto: ", " ", nombre1, " ", telefono1, " ", organizacion1;
+				2:Escribir "Informacion de contacto: ", " ", nombre2, " ", telefono2, " ", organizacion2;
+				3:Escribir " La informacion de contacto es la siguiente : ", " ", nombre3, " ", telefono3, " ", organizacion3;
+				De Otro Modo:
+					Escribir "Opción no permitida, elija otra opción "; Leer  opcionContacto;
+			FinSegun
+		3:
+			Escribir "Qué contacto desea eliminar:";
+			Escribir " Contacto 1 ";
+			Escribir " Contacto 2";
+			Escribir " Contacto 3";
+			Leer eliminar;
+			Segun eliminar Hacer
+				1:Escribir "Este contacto será eliminado: ", " ", contacto1;
+				2:Escribir "Este contacto será eliminado: ", " ", contacto2;
+				3:Escribir "Este contacto será eliminado: ", " ", contacto3;
+				De Otro Modo:
+					Escribir "Opción no valida"; Leer  opcionContacto;
+			FinSegun
+			
+		De Otro Modo:
+			Escribir "Opción incorrecta " , " ", "Presiona cualquier tecla para salir ";
+			Limpiar Pantalla;
+	FinSegun
+Hasta Que opcion == 4;
+Escribir "Salir";
+FinProceso
