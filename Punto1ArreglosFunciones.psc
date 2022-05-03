@@ -1,4 +1,4 @@
-Proceso Punto1
+SubProceso ImpVector( )
 	Definir vector Como Entero;
 	Definir i Como Entero;
 	Dimension vector[5];
@@ -12,5 +12,13 @@ Proceso Punto1
 	Para i<-0 Hasta 4 Con Paso 1 Hacer
 		Escribir "[", [i], "]", " = ", vector[i];
 	FinPara
+FinSubProceso
+
+Proceso Punto1
+	Definir vector Como Entero;
+	Definir i Como Entero;
+	Dimension vector[5];
+	
+	ImpVector( );
 	
 FinProceso

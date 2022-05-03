@@ -1,10 +1,11 @@
-Proceso Punto2
+SubProceso ParesImpares( )
 	Definir arreglo,par,impar,i,indice1,indice2, j Como Entero;
 	indice1<-1;
 	indice2<-1;
 	Dimension arreglo[20];
 	Dimension par[20];
 	Dimension impar[20];
+	
 	para i <- 0 hasta 19 con paso 1 Hacer
 		arreglo[i] <- Aleatorio(1,100);
 	FinPara
@@ -40,4 +41,16 @@ Proceso Punto2
 	SiNo
 		Escribir Sin Saltar "Sin elementos.";
 	FinSi
+FinSubProceso
+
+Proceso Punto2
+	Definir arreglo,par,impar,i,indice1,indice2, j Como Entero;
+	indice1<-1;
+	indice2<-1;
+	Dimension arreglo[20];
+	Dimension par[20];
+	Dimension impar[20];
+	
+	ParesImpares( );
 FinProceso
+

@@ -1,7 +1,6 @@
-Proceso Punto3
+SubProceso numerosPrimos( )
 	Definir primo, contador, x Como Entero;
-	
-	Para primo <- 1 Hasta 100 Hacer
+	Para primo <- 1 Hasta 1000 Hacer
 		x <- 1;
 		contador <- 0;
 		Mientras x <= primo Hacer
@@ -12,7 +11,13 @@ Proceso Punto3
 		FinMientras
 		
 		si contador == 2 Entonces
-			Escribir primo;
+			Escribir Sin Saltar primo, ", ";
 		FinSi
 	FinPara
+FinSubProceso
+
+Proceso Punto3
+	Definir primo, contador, x Como Entero;
+	numerosPrimos( );
+	
 FinProceso
